@@ -1,0 +1,46 @@
+section {
+  background-color: #f8f8f8;
+}
+
+section .do-me::after {
+  /* float 시킨 요소 부모에게 clear => 높이를 잊지 않게.. */
+  content: "";
+  clear: both;
+  display: block;
+}
+
+section .do-me .do-inner {
+  width: 30%;
+  padding: 2rem;
+  float: left;
+  background-color: white;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+section .do-me .do-inner:last-child {
+  /* 마지막 요소 margin 삭제 */
+  margin: 0;
+}
+
+section .do-me .do-inner:hover {
+  background-color: lightcoral;
+  color: white;
+}
+
+section .do-me .do-inner:hover .icon i {
+  color: white;
+}
+
+section .do-me .do-inner .icon i {
+  font-size: 2.5rem;
+  color: #ff6a6a;
+}
+
+section .do-me .do-inner .content h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+section .do-me .do-inner .content p {
+  font-size: 1.15rem;
+}
